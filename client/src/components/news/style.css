@@ -1,0 +1,112 @@
+/* Fixed Newsletter Form - Remove absolute positioning */
+.newLetterBanner {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  /* REMOVED: position: absolute, bottom, left, z-index */
+  position: relative; /* Changed from absolute to relative */
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.newLetterBanner input {
+  width: 100%;
+  height: 60px; /* Fixed height */
+  background: #fff;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding-left: 60px;
+  padding-right: 140px; /* Reduced to fit button better */
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.newLetterBanner input:focus {
+  box-shadow: 0 4px 20px rgba(59, 183, 126, 0.3);
+}
+
+.newLetterBanner .subscribeBtn {
+  padding: 12px 25px !important;
+  border-radius: 25px !important;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #3bb77e 0%, #2e9a68 100%) !important;
+  color: #fff !important;
+  height: 50px;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  font-weight: 500 !important;
+  border: none !important;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.newLetterBanner .subscribeBtn:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 8px 20px rgba(59, 183, 126, 0.4);
+}
+
+.newLetterBanner .sendIcon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 24px !important;
+  color: #3bb77e;
+  opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .newLetterBanner {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .newLetterBanner input {
+    font-size: 14px;
+    padding-left: 50px;
+    padding-right: 120px;
+  }
+  
+  .newLetterBanner .subscribeBtn {
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+    height: 45px;
+  }
+  
+  .newLetterBanner .sendIcon {
+    font-size: 20px !important;
+    left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputWrapper {
+    height: 50px;
+  }
+  
+  .newLetterBanner input {
+    height: 50px;
+    padding-left: 45px;
+    padding-right: 110px;
+    font-size: 13px;
+  }
+  
+  .newLetterBanner .subscribeBtn {
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    height: 40px;
+  }
+}

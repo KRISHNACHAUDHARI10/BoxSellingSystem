@@ -1,0 +1,48 @@
+.notFoundPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fdfdfd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notFoundContainer {
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notFoundGif {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.notFoundContainer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.notFoundContainer p {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.homeButton {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+  background-color: #0056b3;
+}

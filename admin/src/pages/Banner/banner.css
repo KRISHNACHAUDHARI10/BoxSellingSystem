@@ -1,0 +1,26 @@
+/* In your App.css or another CSS file */
+
+.imagesUploadSec .uploadBox {
+  width: 150px; /* Or any size you prefer */
+  height: 150px; /* Or any size you prefer */
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden; /* Ensures the image stays within the rounded corners */
+  background-color: #f8f9fa; /* A light background color */
+}
+
+.imagesUploadSec .uploadBox .lazy-load-image-background {
+  width: 100%;
+  height: 100%;
+}
+
+.imagesUploadSec .uploadBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the box without distortion */
+}
+
+.imagesUploadSec .uploadBox .info {
+  text-align: center;
+}

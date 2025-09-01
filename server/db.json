@@ -1,0 +1,129 @@
+{
+  "categorylist": [
+    {
+      "_id": "1",
+      "name": "Cake Box",
+      "images": [
+        "https://res.cloudinary.com/demo/image/upload/cakebox.png"
+      ],
+      "color": "#ecffec",
+      "slug": "cake-box",
+      "children": [
+        {
+          "_id": "1-1",
+          "name": "Mini Cake Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/mini-cakebox.png"
+          ],
+          "color": "#d3f8e2",
+          "slug": "mini-cake-box",
+          "children": []
+        },
+        {
+          "_id": "1-2",
+          "name": "Large Cake Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/large-cakebox.png"
+          ],
+          "color": "#a8edea",
+          "slug": "large-cake-box",
+          "children": []
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "name": "Pizza Box",
+      "images": [
+        "https://res.cloudinary.com/demo/image/upload/pizzabox.png"
+      ],
+      "color": "#fff3e0",
+      "slug": "pizza-box",
+      "children": [
+        {
+          "_id": "2-1",
+          "name": "Thin Crust Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/thin-pizza-box.png"
+          ],
+          "color": "#ffe0b2",
+          "slug": "thin-crust-box",
+          "children": []
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "name": "Gift Box",
+      "images": [
+        "https://res.cloudinary.com/demo/image/upload/giftbox.png"
+      ],
+      "color": "#fce4ec",
+      "slug": "gift-box",
+      "children": [
+        {
+          "_id": "3-1",
+          "name": "Birthday Gift Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/birthday-gift-box.png"
+          ],
+          "color": "#f8bbd0",
+          "slug": "birthday-gift-box",
+          "children": []
+        },
+        {
+          "_id": "3-2",
+          "name": "Wedding Gift Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/wedding-gift-box.png"
+          ],
+          "color": "#f48fb1",
+          "slug": "wedding-gift-box",
+          "children": []
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "name": "Jewelry Box",
+      "images": [
+        "https://res.cloudinary.com/demo/image/upload/jewelrybox.png"
+      ],
+      "color": "#e1bee7",
+      "slug": "jewelry-box",
+      "children": [
+        {
+          "_id": "4-1",
+          "name": "Ring Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/ring-box.png"
+          ],
+          "color": "#ce93d8",
+          "slug": "ring-box",
+          "children": []
+        }
+      ]
+    },
+    {
+      "_id": "5",
+      "name": "Chocolate Box",
+      "images": [
+        "https://res.cloudinary.com/demo/image/upload/chocolatebox.png"
+      ],
+      "color": "#efebe9",
+      "slug": "chocolate-box",
+      "children": [
+        {
+          "_id": "5-1",
+          "name": "Dark Chocolate Box",
+          "images": [
+            "https://res.cloudinary.com/demo/image/upload/dark-choco-box.png"
+          ],
+          "color": "#d7ccc8",
+          "slug": "dark-chocolate-box",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+.cartSection{
+  width: 100%;height: auto;padding: 35px 0px;
+}
+
+/* Make sure the table allows border radius */
+.cartWrapper .table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Add background and border radius to first and last header cells */
+.cartWrapper .table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.cartWrapper .table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* Optional: background and padding */
+.cartWrapper .table thead th {
+  background-color: #f1f1f1;
+  padding: 12px;
+}
+ .cartWrapper table tbody td .img img{
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgba(0,0,0,0.2);
+  object-fit: contain;
+}
+.cartWrapper table tbody tr{
+  padding-left: 50px !important;
+}
+
+.cartWrapper table tbody td .info a{
+ color: rgba(0,0,0,0.7);
+}
+.cartWrapper table tbody td .info a:hover{
+  text-decoration: none;
+}
+.cartWrapper table tbody td .info a{
+  text-decoration: none;
+}
+.cartWrapper table tbody td{
+  vertical-align: middle;
+}
+.cartWrapper  table tbody td span{
+  font-weight: 600; font-size: 17px;
+}
+.cartWrapper  table tbody td span.text-g{
+  font-weight: bold;
+}
+.cartRightBox{
+padding-left: 190px;
+}

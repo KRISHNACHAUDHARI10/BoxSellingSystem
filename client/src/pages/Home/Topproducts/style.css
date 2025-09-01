@@ -1,0 +1,38 @@
+.topsellingbox .items{padding: 15px 0px;}
+.topsellingbox  h4{font-size: 30px; font-weight: 600;position: relative;padding-bottom: 20px; margin-bottom: 28px;}
+.topsellingbox h4::after{
+  content: '';width:100%;
+  height: 3px;
+  background: #ccc;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.topsellingbox h3::before{
+  content: '';
+  width:20%;
+  height: 3px;
+  background: #bce3c9;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 10;
+}
+.topsellingbox .items .img{
+  width:30%;
+  background: #ccc;
+}
+
+.topsellingbox .items .info{
+  width: 70%;
+}
+.topsellingbox .items .info a{
+  text-decoration: none;color: #000;font-weight: bold;font-size: 10px  !important;
+}
+.topsellingbox .items .info h4{
+  font-weight: bold !important;
+  opacity: 0.8;
+}
+.topsellingbox .items:hover{
+  transform:  translateY(-8px);
+}

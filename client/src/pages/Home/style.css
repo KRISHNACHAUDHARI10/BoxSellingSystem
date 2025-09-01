@@ -1,0 +1,138 @@
+/* ---------------- Home Products Section ---------------- */
+.homeProducts {
+  padding: 15px 0;
+}
+
+/* Popular Products Row */
+.homeProducts .productRow {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  margin: 0 -15px;
+}
+
+.homeProducts .productRow .item {
+  flex: 0 0 20%; /* 5 items per row */
+  padding: 15px;
+  box-sizing: border-box; /* include padding in width */
+}
+
+/* Category Tabs */
+.category-tab {
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.category-tab.active {
+  background: #43da2f;
+  color: white;
+}
+
+/* Daily Best Sells Slider */
+.homeProductsRow2 .prodSlider .item {
+  display: flex;
+  justify-content: center; /* center product card */
+  padding: 0 10px; /* spacing between slides */
+  box-sizing: border-box;
+}
+
+/* ---------------- Responsive Layout ---------------- */
+@media (max-width: 1200px) {
+  .homeProducts .productRow .item {
+    flex: 0 0 25%; /* 4 items per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .homeProducts .productRow .item {
+    flex: 0 0 33.33%; /* 3 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .homeProducts .productRow .item {
+    flex: 0 0 50%; /* 2 items per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .homeProducts .productRow .item {
+    flex: 0 0 100%; /* 1 item per row */
+  }
+}
+
+/* ---------------- Other Styles ---------------- */
+.filter-Tab li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  font-weight: 600;
+}
+
+.filter-Tab li {
+  margin-left: 20px;
+}
+
+.filter-Tab li a:hover {
+  color: #3bb77e !important;
+}
+
+.newsLetteeSection {
+  width: 100%;
+  height: auto;
+}
+
+.newsLetteeSection .box {
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 20px 80px;
+  border-radius: 30px;
+  margin: 15px;
+}
+
+.newsLetteeSection .box .info {
+  width: 60%;
+  padding: 20px;
+}
+
+.newsLetteeSection .box .img {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: 15px;
+}
+
+.newsLetteeSection .box .img img {
+  width: 350px;
+  height: 310px;
+  object-fit: cover;
+}
+
+.cart-my {
+  border-radius: 12px;
+}
+
+.newsLetteeSection .box .info h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.newsLetteeSection .box .a {
+  position: relative !important;
+  right: 80px !important;
+  bottom: inherit !important;
+  top: 120px;
+}

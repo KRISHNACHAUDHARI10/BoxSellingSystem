@@ -1,0 +1,45 @@
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4CAF50;
+  border-radius: 30px;
+  padding: 6px 10px;
+  width: fit-content;
+  gap: 12px; /* spacing between buttons & number */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.quantity-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: white;
+  color: #4CAF50;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background: #e8f5e9;
+  transform: scale(1.05);
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-display {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 28px;
+  text-align: center;
+}

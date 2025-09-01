@@ -1,0 +1,60 @@
+.selectdrop {
+  position: absolute;
+  top: 146%; /* places it below the category */
+  left: -20px; /* shift 10px to the left */
+  width: 230px;
+  height: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0 0 0/ 20%);
+  padding: 15px;
+}
+.selectDropWrapper{
+  width: 25%;
+}
+.selectdropwrapper .openSelect{display: block;padding: 10px 0px;} 
+.searchfield input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #bce3c9;
+  outline: none;
+  padding: 0px  15px;
+}
+.selectdrop .searchresult{
+   width: 100%;margin: 0px;margin-top: 10px;  padding: 10px 0px;max-height: 180px;overflow-y: scroll;
+}
+.selectdrop .searchresult::-webkit-scrollbar{width: 7px !important;}
+.selectdrop .searchresult::-webkit-scrollbar-thumb{background: #ccc!important;}
+
+.selectdrop .searchresult li{
+  list-style: none;font-size: 17px;width: 100%;padding: 10px;color: rgba(0,0,0,0.7); 
+  border-radius: 7px;
+}
+.selectdrop .searchresult li:hover{
+  background: #3bb77e;color: #fff;
+}
+.selectdrop .searchresult li:active{
+  background: #f1f1f1;color: #000 !important;
+} 
+.selectdropwrapper .openSelect .arrow{
+ position: absolute;top:5px; right: 10px; 
+}
+.openSelect {
+  cursor: pointer;
+}
+
+.searchresult li {
+  cursor: pointer;
+}
+
+.openSelect {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.arrow {
+  margin-left: 8px; /* optional: spacing between text and icon */
+  font-size: 25px;
+}

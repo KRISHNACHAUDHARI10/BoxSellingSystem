@@ -1,0 +1,201 @@
+/* src/components/catslider/style.css */
+
+/* --- Global Section Styling --- */
+.catslider-section {
+    padding: 15px 0; /* Slightly reduced top/bottom padding for the section */
+    font-family: 'Inter', sans-serif; /* Recommended font */
+}
+
+.catslider-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 0; /* Already 0, keeping it */
+    color: #333;
+    text-align: center; /* Center the heading */
+}
+
+/* --- Slider Specific Styles (react-slick) --- */
+.catslider-main-slider .slick-prev,
+.catslider-main-slider .slick-next {
+    width: 35px; /* Slightly smaller arrows */
+    height: 35px; /* Slightly smaller arrows */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+    border-radius: 50%;
+    z-index: 10; /* Ensure arrows are above content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to arrows */
+    transition: background-color 0.3s ease;
+}
+
+.catslider-main-slider .slick-prev:hover,
+.catslider-main-slider .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.catslider-main-slider .slick-prev:before,
+.catslider-main-slider .slick-next:before {
+    font-size: 18px; /* Slightly smaller icon */
+    color: #fff;
+    line-height: 1;
+}
+
+.catslider-main-slider .slick-prev {
+    left: -15px; /* Adjusted closer to the slider */
+}
+
+.catslider-main-slider .slick-next {
+    right: -15px; /* Adjusted closer to the slider */
+}
+
+/* Gap adjustment for react-slick slides */
+.catslider-main-slider .slick-slide {
+    padding: 0 8px; /* Reduced horizontal padding between slides */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+/* --- Individual Category Item Styling (Applies to both Slider and Grid) --- */
+.catslider-item {
+    text-align: center;
+    padding: 5px; /* Reduced padding around the circular item within its container */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.catslider-item-info {
+    /* Make it circular */
+    width: 140px; /* Slightly reduced size of the circle */
+    height: 140px; /* Slightly reduced size of the circle */
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Hides content that overflows the circular shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 3px auto; /* Reduced bottom margin */
+    padding: 8px; /* Reduced padding inside the circular area for content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.catslider-item-info:hover {
+    transform: translateY(-5px) scale(1.01); /* Slightly less lift and scale on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Slightly less pronounced shadow on hover */
+}
+
+.catslider-item-info img {
+    width: 80px; /* Consistent square size */
+    height: 80px; /* Consistent square size */
+    object-fit: cover; /* Crops the image to fill the area */
+    border-radius: 8px; /* Rounded corners for the image */
+    background: none; /* No background on the image itself */
+    margin-bottom: 5px; /* Reduced space between image and text */
+}
+
+.catslider-item-info h5 {
+    font-size: 15px; /* Slightly smaller font size */
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* --- Grid Layout Specific Styles --- */
+.catslider-grid {
+    --items-per-row: 6; /* Default for large screens */
+    --gap-between-items: 15px; /* Reduced default gap */
+
+    display: grid; /* Use CSS Grid for a more robust layout */
+    grid-template-columns: repeat(var(--items-per-row), minmax(100px, 1fr)); /* Responsive columns */
+    gap: var(--gap-between-items); /* Gap between grid items */
+    justify-content: center; /* Center the grid within its container */
+    padding: 0 10px; /* Reduced horizontal padding to the grid container */
+}
+
+/* Responsive adjustments for the grid */
+@media (max-width: 1200px) {
+    .catslider-grid {
+        --items-per-row: 5;
+        --gap-between-items: 12px; /* Reduced */
+    }
+}
+
+@media (max-width: 1024px) {
+    .catslider-grid {
+        --items-per-row: 4;
+        --gap-between-items: 10px; /* Reduced */
+    }
+}
+
+@media (max-width: 768px) {
+    .catslider-grid {
+        --items-per-row: 3;
+        --gap-between-items: 8px; /* Reduced */
+    }
+    .catslider-item-info {
+        width: 110px; /* Reduced */
+        height: 110px; /* Reduced */
+    }
+    .catslider-item-info img {
+        width: 55px; /* Adjusted */
+        height: 55px; /* Adjusted */
+        border-radius: 6px; /* Adjusted */
+    }
+    .catslider-item-info h5 {
+        font-size: 13px; /* Reduced */
+    }
+}
+
+@media (max-width: 480px) {
+    .catslider-grid {
+        --items-per-row: 2;
+        --gap-between-items: 6px; /* Reduced */
+    }
+    .catslider-item-info {
+        width: 90px; /* Reduced */
+        height: 90px; /* Reduced */
+    }
+    .catslider-item-info img {
+        width: 45px; /* Adjusted */
+        height: 45px; /* Adjusted */
+        border-radius: 4px; /* Adjusted */
+    }
+    .catslider-item-info h5 {
+        font-size: 11px; /* Reduced */
+    }
+}
+
+@media (max-width: 320px) {
+    .catslider-grid {
+        --items-per-row: 1; /* Stack items vertically on very small screens */
+        --gap-between-items: 10px; /* Keeping some space for single column */
+    }
+    .catslider-item-info {
+        width: 140px; /* Consistent with non-responsive default, but adjusted */
+        height: 140px; /* Consistent with non-responsive default, but adjusted */
+    }
+    .catslider-item-info img {
+        width: 70px; /* Adjusted */
+        height: 70px; /* Adjusted */
+        border-radius: 8px; /* Adjusted */
+    }
+    .catslider-item-info h5 {
+        font-size: 15px; /* Adjusted */
+    }
+}
+
+/* Optional: Spinner for loading state */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

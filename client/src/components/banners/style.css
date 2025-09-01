@@ -1,0 +1,23 @@
+.bannerSection {
+  padding: 25px 0px;
+}
+
+.bannerSection .box {
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.bannerSection .box img {
+  transition: all 0.3s ease-in-out;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.bannerSection .box:hover img {
+  transform: scale(1.1);
+}

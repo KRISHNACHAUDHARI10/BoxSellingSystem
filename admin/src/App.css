@@ -1,0 +1,1977 @@
+/* --- Global Reset and Base Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif !important;
+}
+body.dark{
+  background: #071739 !important;
+}
+/* --- Header Specific Styles --- */
+header {
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+body.dark header{
+    background:  #112143 !important;
+}
+header .container-fluid {
+  height: 100%;
+}
+
+header .row {
+  margin: 0 !important;
+  height: 100%;
+  align-items: center;
+}
+
+/* Logo and App Name */
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.body.dark .logo-link span{
+  color: #fff !important;
+} 
+
+header .logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 9px;
+ 
+  margin-right: 8px;
+}
+
+header .app-name {
+  color: #191919;
+  font-weight: 800;
+  font-size: 21px;
+}
+body.dark header .app-name {
+  color: #fff !important;opacity: 0.9 ;
+}
+
+/* Common Button Styles (for rounded-circle buttons) */
+header button.rounded-circle {
+  min-width: 39px !important;
+  width: 39px !important;
+  height: 39px !important;
+  background: #f0f5ff !important;
+  color: #0858f7;
+  font-weight: bold;
+  font-size: 19px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+header button.rounded-circle svg {
+  color: #292929;
+  transition: all 0.3s ease-in-out;
+}
+body.dark header button.rounded-circle{
+   background:  #112755  !important;
+}
+body.dark header button.rounded-circle svg{
+  color:  #fff !important;
+}
+header button.rounded-circle:hover {
+  background-color: #e0eaff !important;
+}
+
+header button.rounded-circle:hover svg {
+  color: #0858f7 !important;
+}
+
+
+.btn- button{
+  padding: 10px 35px !important;background: #0858f7; color: white;
+}
+/* --- Part 2 - Menu Button and Search Box --- */
+header .part2 {
+  margin-left: 81px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 15px;
+}
+
+/* Search Box */
+.searchbox {
+  width: 320px;
+  height: 40px;
+  background: #f0f5ff;
+  border-radius: 6px;
+  padding: 3px 15px;
+  display: flex;
+  align-items: center;
+}
+body.dark .searchbox{
+   background:  #12254e;
+}
+
+.searchbox input {
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 15px;
+  color: #292929;
+  flex: 1;
+  padding-left: 10px;
+}
+body.dark .searchbox input{
+  color: #fff ;
+}
+.searchbox input::placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+body.dark .searchbox input::placeholder,
+body.dark .searchbox svg{
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.searchbox svg {
+  font-size: 20px;
+  color: #292929;
+}
+
+/* --- Part 3 - Right Aligned Items (Light/Notifications/Profile) --- */
+.part3 {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* User Image / Avatar Styling */
+.userImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #0858f7;
+  padding: 3px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.userImg .rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+}
+
+.userImg .rounded-circle img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* My Account Button (main profile button) */
+.myAcc {
+  text-align: left !important;
+  color: #1810ff;
+  text-transform: capitalize;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* User Info inside My Account Button */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+body.dark .myAcc .userInfo *{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+ 
+.userInfo h5 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userInfo p {
+  margin-top: 0;
+  font-size: 13px;
+  color: #000;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Account Menu Dropdown */
+#account-menu li {
+  font-size: 14px !important;
+}
+
+#account-menu li svg {
+  font-size: 20px !important;
+}
+
+/* Notification Row Styling */
+.notify-user-row {
+  display: flex !important;
+  align-items: flex-start;
+  min-width: 220px;
+  padding: 8px 16px;
+  gap: 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.notify-user-row:hover {
+  background-color: #f0f0f0;
+}
+
+.notify-user-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #222;
+  flex: 1 1 auto;
+}
+
+.notify-user-info h5 {
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.notify-user-name {
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-right: 4px;
+}
+
+.notify-msg {
+  font-weight: 400;
+  color: #444;
+  display: inline;
+}
+
+.notify-time {
+  color: #888;
+  font-size: 12px;
+  margin-top: 2px;
+}
+body.dark .MuiPaper-elevation{
+  background-color: #12254e !important;
+}
+body.dark .MuiPaper-elevation li *,body.dark .MuiPaper-elevation li{
+  color: #fff;
+}
+/* Increase notification dropdown width */
+.menu-wide {
+  width: 320px !important;
+  max-width: 90vw;
+}
+
+/* Dropdown title in notification */
+.dropdown_list_head {
+  padding: 8px 16px 4px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown_list_head h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Utility Classes */
+.ml-2 {
+  margin-left: 8px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.text-sky {
+  color: rgb(32, 32, 226) !important;
+}
+
+/* --- Main Layout: Flexbox-based Solution --- */
+.main {
+  display: flex; /* Use Flexbox on the parent container */
+  width: 100%;
+}
+
+.slidebar {
+  width: 280px; /* Use a fixed width for the open state */
+  min-width: 280px; /* Prevents shrinking */
+  height: calc(100vh - 80px); /* Fill remaining vertical space */
+  position: sticky;
+  top: 80px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+body.dark .main .slidebar{
+  background: #112143;
+}
+
+.slidebar.toggle {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  border-right: none;
+}
+
+body.dark .main .slidebar ul li   button {
+  color: rgba(255,255,255,0.9) !important;
+}
+body.dark .main .slidebar ul li   button:hover{
+  background: rgba(255, 255,255, 0.1) !important;
+}
+body.dark .main .slidebar ul li   button:active{
+  background: rgba(255, 255,255, 0.1) !important;
+}
+body.dark .main .slidebar ul li   .submenu::before{
+  background: rgba(255,255,255,0.2);
+}
+body.dark .main .slidebar ul .submenu li a:hover{
+color: #fff;
+
+}
+.slidebar.toggle .slidebar-content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.content {
+  flex-grow: 1; /* Allow the content to take up all available space */
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  padding: 45px; /* Add padding here for a clean layout */
+}
+
+/* --- Webkit Scrollbar Customization --- */
+.slidebar::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+.slidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.slidebar:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+  background-color: #0858f7;
+}
+
+.slidebar:hover::-webkit-scrollbar {
+  background-color: #f0f5ff;
+}
+
+/* --- Sidebar Content Styles --- */
+.slidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slidebar ul li a {
+  text-decoration: none;
+}
+
+/* Sidebar Button */
+.sidebar-btn {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  text-align: left;
+  padding: 12px 15px !important;
+  color: #000 !important;
+  width: 100%;
+  border-radius: 0;
+  opacity: 0.7;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-btn .icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-btn .icon + span {
+  flex-grow: 1;
+}
+
+.sidebar-btn .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Active and Hover States for Sidebar Buttons */
+.sidebar-btn:hover {
+  background-color: #f0f5ff !important;
+  opacity: 1;
+}
+
+.sidebar-btn.active {
+  background: #e0eaff !important;
+  color: #0858f7 !important;
+  opacity: 1;
+}
+
+.sidebar-btn.active .icon svg,
+.sidebar-btn.active .arrow svg {
+  color: #0858f7 !important;
+}
+
+/* Submenu Styles */
+.submenuWrapper {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* The spelling "colapsed" from the original code has been maintained */
+.submenuWrapper.colapsed {
+  height: 0;
+  opacity: 0;
+}
+
+.submenuWrapper.colapse {
+  height: auto;
+  opacity: 1;
+}
+
+.submenu {
+  padding: 10px 0 10px 45px;
+  position: relative;
+}
+
+.submenu li {
+  list-style: none;
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  padding-left: 10px;
+}
+
+/* Vertical line for submenu */
+.submenu::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 35px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+.submenu li a {
+  color: #5e5d72 !important;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0px;
+  font-size: 13.4px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.submenu li a:hover {
+  color: #0858f7 !important;
+}
+body.dark .submenu li a:hover{
+  color: #fff !important;
+}
+
+/* Consolidating redundant/conflicting rules */
+.slidebar ul .submenu {
+  /* This rule duplicates padding, keeping it as-is for consistency */
+  padding-left: 35px;
+}
+
+/* This rule seems to target an active state for a button with class 'act' which is not in the provided JS */
+.slidebar ul li button.act {
+  background: #f1f1f1 !important;
+}
+
+/* Logout section styles */
+.logutWrapper {
+  padding: 0px 25px;
+}
+
+.logutWrapper .LogoutBox {
+  width: 100%;
+  height: 130px;
+  padding: 25px;
+  background: #bcd2fd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 25px;
+}
+
+.logutWrapper .LogoutBox button {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.logutWrapper .LogoutBox::before {
+  content: '';
+  width: 70px;
+  height: 70px;
+  background: #0858f7;
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  opacity: 0.5;
+}
+
+.logutWrapper .LogoutBox::after {
+  content: '';
+  width: 30px;
+  height: 40px;
+  background: #0858f7;
+  border-radius: 100%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0.5;
+}
+body.dark .logutWrapper .LogoutBox{
+  background: transparent;background-image: linear-gradient(#183e8c,#163474);
+}
+
+.logutWrapper .LogoutBox button svg {
+  margin-right: 10px;
+}
+
+/* Add this near other arrow-related styles */
+.sidebar-btn .arrow svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-btn .arrow.rotate-arrow svg {
+  transform: rotate(90deg);
+}
+
+.dashbordBoxWrapper {
+  gap: 25px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.dashbordBoxWrapper .dashboardBox {
+  width: 48.2%;
+  height: 166px;
+  border-radius: 13px;
+  text-transform: capitalize !important;
+  overflow: hidden;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left !important;
+  justify-content: flex-start !important;
+  position: relative;
+  color: #fff;
+}
+.dashbordBoxWrapper .dashboardBox .col1 h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dashbordBoxWrapper .dashboardBox .toggleicon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+
+.dashbordBoxWrapper .dashboardBox .col1 span {
+  font-size: 32px !important;
+  font-weight: bold;
+  line-height: 45px;
+}
+.dashbordBoxWrapper .dashboardBox .icon svg {
+  font-size: 34px;
+  opacity: 0.3;
+  color: #fff;
+}
+.dashbordBoxWrapper .dashboardBox .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+.dashbordBoxWrapper .box {
+  width: 130%;
+  height: 100%;
+}
+.dashbordBoxWrapper .dashboardBox .chart {
+  opacity: 0.050;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.dashbordBoxWrapper .dashboardBox .chart svg {
+  font-size: 110px;
+  color: #000;
+}
+.dashbordBoxWrapper .dashboardBox .bottomEle {
+  position: relative;
+  top: 15px;
+  
+}
+.dashbordBoxWrapper .dashboardBox .MuiList-root svg {
+  color: #000 !important;
+  font-size: 17px !important;
+  margin-right: 10px !important;
+}
+
+.dropdown_menu .MuiList-root svg {
+  margin-right: 10px !important;
+}
+.graphbox {
+  background-image: linear-gradient(#1a15c0, #2a69e8);
+  border-radius: 10px;
+  padding: 25px;
+}
+.toggleicon {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+.toggleicon svg {
+  color: #fff !important;
+  font-size: 20px !important;
+  opacity: 1 !important;
+}
+.graphbox h6 {
+  font-size: 15px;
+  font-weight: 600;
+}
+.graphbox p {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+}
+.card {
+  margin: 20px 0px;
+  border-radius: 10px;
+}
+.card .hd {
+  font-size: 17px;
+  font-weight: bold;
+  color: #403e57;
+}
+body.dark .card{
+  background: #112143 !important;
+}
+body.dark .card .hd{
+  color: rgba(255, 255, 255, 0.8)
+}
+.cardFilters .col-md-4 h5 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #ff0000;
+}
+
+body.dark .cardFilters .col-md-4 h5{
+  color: rgba(255, 255, 255, 0.8);
+}
+.table .thead-dark th {
+  background-color: #1866ee !important;
+  border-color: rgba(255, 255, 255, 0) !important;
+  font-size: 12px !important;
+}
+h1, h2, h3, h4, h5, h6, p {
+  color: #403e57;
+}
+
+
+body.dark .css-trm6af-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);;
+}
+body.dark .css-trm6af-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.hover{
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+body.dark .css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon,body.dark .css-bpeome-MuiSvgIcon-root-MuiSelect-icon{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.table .thead-dark td {
+  font-size: 13px !important;
+  font-weight: 500;
+}
+body.dark .cardFilters h5{
+  color: rgba(255, 255, 255, 0.8);
+}
+body.dark table .prdocutbox h6,.body.dark  table .prdocutbox p{
+  color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .table-bordered td,.table-bordered th{
+  border:  1px solid rgba(255, 255,255, 0.2) !important;
+}
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root{
+  color: rgba(255, 255, 255, 0.8);
+}
+.table tbody .actions button {
+  min-width: 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 20px !important;
+  margin: 0px 5px;
+}
+.table tbody td {
+  font-size: 14px !important;
+  color: #2f2d3e;
+  font-weight: 500;
+}
+body.dark .table tbody td{
+  color: rgba(255, 255, 255, 0.8);
+}
+.table tbody .actions button svg {
+  font-size: 30px !important;
+}
+.table tbody .actions button.secondary {
+  background: rgba(203, 60, 231, 0.1) !important;
+}
+.table tbody .actions button.success {
+  background: rgba(26, 159, 83, 0.1) !important;
+}
+.table tbody .actions button.error {
+  background: rgba(241, 17, 51, 0.2);
+}
+table.v-align td {
+  vertical-align: middle !important;
+}
+.table td .old, .table td .new {
+  display: block;
+  width: 100%;
+}
+table td .imgWrapper {
+  width: 20%;
+  flex: 0 0 20%;
+}
+
+table td .info {
+  width: 65%;
+  flex: 0 0 65%;
+}
+table td .info h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+table td .info h6{
+  color: #5b5353;
+}
+table td .info p {
+  font-size: 13px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #5e5d72;
+  margin-bottom: 0px;
+}
+table.v-align td .prdocutbox {
+  width: 300px;
+}
+table.v-align td .prdocutbox .info {
+  width: 100%;
+}
+
+.tableFooter {
+  padding-bottom: 20px;
+}
+.tableFooter .pagination {
+  margin-left: auto;
+}
+.tableFooter p {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+/* ..css- */
+.css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: #0858f7 !important;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+
+
+
+/* login css */
+.loginSection{
+  width: 100%;
+  height: 100vh;
+  position: 35px 25px;
+   position: relative;
+  z-index: 100;
+  
+
+  
+  
+}
+.my-siginbtn{
+  background: #0858f7;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-blue{
+  border-radius: 8px !important;font-weight: 800;
+}
+.full{
+  max-width: 100% !important;flex: 0 0 100% !important;width: 100% !important ; 
+}
+
+
+.Loginpattern{
+  width: 100%; height: 100%; opacity: 0.1; position: fixed;top: 0;left:0;z-index:  99;pointer-events: none;position: fixed;
+  
+}
+
+.loginSection .loginBox{
+  border-radius: 8px;
+  width: 400px; height: 600px; margin: auto;background: #ccc;
+}
+.loginSection .loginBox .wrapper{
+       width: 100%; height: auto;background: #f0f0f0; position: relative;z-index: 100;padding: 35px;
+
+}
+.loginSection .loginBox .wrapper .form-control{
+ background: #fff !important;box-shadow: none !important; box-shadow: none !important; outline: none !important;font-size: 14px;font-weight: 600; height: 45px;padding-left: 45px;border-radius: 8px;
+}
+.loginSection .loginBox .wrapper .form-control  .icon svg{
+  color: #0858f7 !important;
+}
+.loginSection .loginBox .wrapper .form-group.focus .icon svg{
+  color: #0858f7 !important;
+}
+.loginSection .loginBox .wrapper .form-group .icon{
+ position: absolute; top: 3px;left: 15px;z-index: 100;font-size: 23px;
+}
+.loginSection .loginBox .wrapper .form-group .icon svg{
+ opacity: 0.8;
+}
+.loginSection .loginBox .wrapper .form-group .icon svg{
+  columns:  #5e5d72 ;
+}
+
+.toggleShowPassword {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.toggleShowPassword  svg{font-size: 20px;}
+.btn-big{
+  padding: 7px 25px  !important;
+}
+.link{
+  color:  #5e5d72; text-decoration: none;font-weight: 600;
+}
+.link:hover{
+  color:  #0858f7;text-decoration: none;
+}
+.loginSection .loginBox .wrapper .link{
+ font-size: 14px;color: #000;text-decoration: none; cursor: pointer;margin-bottom: 5px;
+}
+.loginSection .loginBox .wrapper .or span.line{ 
+ display: block;width: 35%;height: 1px;background: rgba(0, 0, 0, 0.1);
+}
+.loginSection .loginBox .wrapper .or span.txt{
+  display: flex;align-items: center;justify-content: center; font-size: 16px;font-weight: 600;width: 40px;height: 40px;border: 1px solid rgba(0,0,0,0.2); border-radius: 50%;
+}
+.loginSection .loginBox .wrapper .form-group{
+  margin-bottom: 18px;
+}
+.loginwithgoogle{
+  text-transform: capitalize;font-weight: bold !important;
+}
+.link.color{
+  color: #0858f7 !important;text-decoration: none;
+}
+.logo-icon{
+  border-radius: 50%;
+  height: 55%;
+  width: 18%;
+}
+.signUpSection{
+  height: auto; 
+  padding: 0px 0px;
+}
+.signUpSection .loginBox{
+  position: relative;
+ z-index: 100;
+
+ width: 100% !important;
+  padding: 25px 5px !important ;
+  left: 30px;
+  width: 100% !important;
+}
+.signUpSection .loginBox .wrapper{border: 0px !important;background:  transparent !important;padding-top: 10px !important;}
+.row .singupbox{
+  height: auto;
+  padding-bottom: 0;
+}
+.signUpSection .part1{
+  padding-left: 100px;padding-right: 120;
+}
+.signUpSection .part1 h1{
+ font-size: 40px; font-weight: 800; 
+}
+.signUpSection .part1  p{
+   font-size: 18px; font-weight: 560;
+
+  }
+  .my-btnss {
+padding: 11px;
+}
+.my-btnss  button{
+  background: #0858f7;
+  color: white;
+  margin-top: 25px;
+  
+}
+.my-signin button{
+  background: #0858f7;
+  color: white;
+  width: 110px;
+}
+.my-btnss  button svg{
+  font-size: 25px;
+  margin-right: 5px;
+  position: relative;
+  bottom: 2px;
+}
+
+
+
+
+
+/* 
+products */
+/* detail css */
+/* ========== LIGHT MODE (Default) ========== */
+body {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Breadcrumb */
+.mybreadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  background: #f5f7fa;
+  border: 1px solid #e3e8f0;
+  padding: 12px 20px;
+}
+.mybreadcrumb h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+.mybreadcrumb .MuiBreadcrumbs-root {
+  background-color: transparent;
+}
+.css-jhr02i-MuiBreadcrumbs-separator {
+  color: #555;
+}
+
+/* Slider */
+.slick-slide { outline: none !important; }
+.sliderSml .slick-slide { padding-right: 10px; }
+.sliderSml .slick-slide .item { border-radius: 7px !important; overflow: hidden; }
+.sliderSml *, .sliderBig * { transition: all 0.2s !important; }
+.sliderBig { overflow: hidden; border-radius: 7px; }
+.sliderSml .slick-slide .item {
+  overflow: hidden;border-radius: 7px;border: 1px dashed black !important;
+
+}
+.sliderBig .item{
+  overflow: hidden;border-radius: 7px;border: 1.6px dashed black !important;
+}
+body.dark .sliderBig .item{
+  border: 1.6px dashed rgba(255, 255, 255, 0.8)!important;
+}
+/* Product Info */
+.productDetailsSEction .productInfo .icon {
+  width: 28%; flex: 0 0 20%;
+}
+.productDetailsSEction .productInfo .icon svg { font-size: 20px; }
+.productDetailsSEction .productInfo .name {
+  width: 72%; flex: 0 0 72%; font-weight: 600; font-size: 15px;
+}
+.productDetailsSEction .productInfo .row .col-sm-7 span {
+  opacity: 0.8; font-size: 15px; padding-left: 9px;
+}
+.productDetailsSEction .productInfo .row { margin-bottom: 10px !important; }
+.productDetailsSEction .productInfo .row .col-sm-7 {
+  display: flex; align-items: center; opacity: 0.8; font-size: 15px; padding-left: 10px;
+}
+/* .row ul li{
+  color: #000;
+  background: #fff;
+} */
+/* Base tag style */
+.tags.Sml .list-inline-item span {
+  display: inline-block;
+  padding: 0px 12px;
+ 
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0);
+  color: #333;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-mode .tags.Sml .list-inline-item span {
+  background: #09235b;
+  color: #ffffff;
+  border: 1px solid #102952;
+}
+
+/* Hover effect */
+.tags.Sml .list-inline-item span:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+/* Ratings & Reviews */
+.ratingSection { width: 500px; }
+.reviewSection .reviewsRow{
+  margin: 15px 0px;
+}
+.reviewSection .reviewsRow.reply{
+  margin-left: auto;width: 90%;
+}
+.ratingSection .ratingrow { width: 100%; margin-bottom: 15px !important; }
+.ratingSection .ratingrow .col1 { width: 15%; flex:0 0 15%; display: flex; }
+.ratingSection .ratingrow .col2 { width: 50%; flex:0 0 50%; }
+.ratingSection .ratingrow .col3 { width: 25%; flex:0 0 25%; display: flex; padding-left: 20px; }
+.ratingSection .ratingrow .progress { height: 4px !important; background-color: #000 !important; }
+.ratingSection .ratingrow .progress .progress-bar { background: #edb123 !important; }
+.reviewSection { width: 100%; display: flex; flex-direction: column; }
+.reviewSection .reviewsRow {
+  width: 100%; background: #f5f7fa; padding: 35px; border-radius: 10px; height: auto;
+}
+.userImg.lg { width: 60px !important; height: 60px !important; }
+.userinforamtion h6 { margin-bottom: 0px; }
+.reviewsRow .repbtn { margin-left: auto; }
+.reviewsRow button {
+  background-color: #0858f7 !important;
+  color: #fff;
+  height: 42px;
+  border-radius: 8px;
+  width: 90px;
+  margin-bottom: 0px;
+}
+
+ .reviewForm textarea{
+  background: #ffffff;
+  border: 1px solid gray;
+}
+.presentation{
+  cursor: pointer;
+}
+.reviewForm{
+  width: 100%;
+}
+body.dark h4{
+  color: rgba(255, 255, 255, 0.6);
+}
+h4{
+  color: #1e1919;
+}
+body.dark p{
+   color: rgba(255, 255, 255, 0.8);
+   }
+.reviewForm textarea{
+  width: 100%;height: 200px;background: #ffffff ;outline: navajowhite !important;padding: 15px;
+  border-radius: 10px;color: rgba(255, 255, 255, 0.7);border: 1px solid #132345 !important ;
+}
+
+
+.reviewForm textarea::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.5);
+}
+body.dark .reviewForm textarea::-webkit-input-placeholder{
+     color: rgba(255, 255, 255, 0.7);
+}
+.reviewForm button{
+  background: #0858f7;
+  color: white;
+}
+.dashbordBoxWrapper .box{
+ max-width: 325px;
+}
+
+/* ========== DARK MODE ========== */
+/* body.dark  .reviewForm.textarea{
+  background: #12254e;
+} */
+body.dark {
+  background: #12254e;
+  color: rgba(255,255,255,0.8);
+}
+
+body.dark h5,h6{
+   color: rgba(255, 255, 255, 0.8);
+}
+/* Breadcrumb - Dark */
+body.dark .mybreadcrumb {
+  background: #12254e !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: #1a2b4d !important;
+  color: rgba(255,255,255,0.8);
+}
+.repbtn svg{
+  font-size: 25px;
+  padding-right: 5px;
+}
+body.dark .css-1ckov0h-MuiSvgIcon-root{
+  fill: rgb(255 179 0);
+}
+body.dark .mybreadcrumb h5 {
+  color: rgba(255,255,255,0.8);
+}
+body.dark .MuiBreadcrumbs-root {
+  background-color: transparent;
+}
+body.dark .css-jhr02i-MuiBreadcrumbs-separator {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Slider - Dark */
+body.dark .sliderSml .slick-slide .item,
+body.dark .sliderBig {
+  background: #1d2b4d;
+}
+body.dark .sliderSml *, body.dark .sliderBig * {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Product Info - Dark */
+body.dark .productDetailsSEction .productInfo .name,
+body.dark .productDetailsSEction .productInfo .row .col-sm-7,
+body.dark .productDetailsSEction .productInfo .row .col-sm-7 span {
+  color: rgba(255,255,255,0.8);
+}
+body.dark .productDetailsSEction .productInfo .icon svg {
+  color: #edb123;
+}
+
+/* Tags - Dark */
+body.dark .tags li span {
+  background: #1d2b4d !important;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Ratings & Reviews - Dark */
+body.dark .ratingSection {
+  color: rgba(255,255,255,0.8);
+}
+body.dark .ratingSection .ratingrow .progress {
+  background-color: #233567 !important;
+}
+body.dark .ratingSection .ratingrow .progress .progress-bar {
+  background: #edb123 !important;
+}
+body.dark  .reviewsRow {
+  background: #071739;
+  color: rgba(255,255,255,0.8);
+}
+body.dark .reviewsRow button {
+  background-color: #0047ab;
+  color: #fff;
+}
+body.dark .reviewForm textarea {
+  background: #071739;
+}
+/* Misc */
+body.dark .userinforamtion h6 { color: rgba(255,255,255,0.8); }
+
+
+/*
+ * Product Upload Form Stylesheet
+ *
+ * This CSS provides custom styling for the product upload form,
+ * designed to integrate with Material-UI components. It includes
+ * responsive adjustments and distinct light/dark mode themes.
+ *
+ * For optimal maintainability and scalability with Material-UI,
+ * consider migrating these styles into a custom Material-UI theme
+ * using `createTheme` for centralized design tokens and component overrides.
+ */
+
+/* --- Base Form Element Styling --- */
+
+/* Applies bottom margin and border-radius to the container of form fields.
+   In the React component, this class is typically applied to a `Box` wrapping `TextField` or `FormControl`. */
+.form .form-group {
+    margin-bottom: 25px;
+    /* This border-radius applies to the `form-group` container, not directly to the input field itself.
+       For input field rounding, refer to the `.MuiOutlinedInput-root` rule below. */
+    border-radius: 15px;
+}
+
+/* Styles for the 'h6' elements used as labels above input fields. */
+.form .form-group h6 {
+    margin-bottom: 10px; /* Space between label and input */
+    font-size: 13px; /* Smaller font size for labels for a compact look */
+}
+.form .form-group h6{
+  color: #000;
+}
+
+/* Specific height and top padding for textarea elements (e.g., Description field). */
+.form .form-group textarea {
+    height: 120px;
+    padding-top: 15px; /* Ensures text starts lower, providing visual comfort */
+}
+
+/* Specific height for generic input elements within a form-group.
+   Note: This might be overridden or interact with Material-UI's `.MuiOutlinedInput-root` height.
+   Prioritize the MUI-specific height for consistency with MUI components. */
+.form-group input {
+    height: 55px; /* A slightly taller input height */
+}
+
+/* --- Theme-Specific Input & Label Styling (Light Mode) --- */
+
+/* Default (Light Mode) styles for input fields, textareas, and Material-UI Select components.
+   `!important` is used here to ensure these styles override Material-UI's defaults or inline styles.
+   In a themed MUI app, these would typically be set in `createTheme`'s palette and component overrides. */
+body:not(.dark) .form .form-group input,
+body:not(.dark) .form .form-group textarea,
+body:not(.dark) .form .form-group .MuiSelect-select {
+    background-color: #f8f9fa !important; /* Light background for fields */
+    border: 1px solid #ced4da !important; /* Subtle light border */
+    color: #212529 !important; /* Dark text for readability */
+}
+
+/* Text color for h6 labels in light mode. */
+body:not(.dark) .form .form-group h6 {
+    color: #212529; /* Dark text for labels */
+}
+.form-group h6{
+  color: #000;
+}
+
+/* --- Theme-Specific Input & Label Styling (Dark Mode) --- */
+
+/* Dark Mode styles for input fields, textareas, and Material-UI Select components.
+   `!important` is used for overriding. Best practice is to define these in a dark Material-UI theme. */
+body.dark .form .form-group input,
+body.dark .form .form-group textarea,
+body.dark .form .form-group .MuiSelect-select {
+    background-color: #1b2b4d !important; /* Dark background for fields */
+    border: 1px solid #253557 !important; /* Darker, subtle border */
+    color: rgba(255, 255, 255, 0.9) !important; /* Light text for readability */
+}
+
+/* Text color for h6 labels in dark mode. */
+
+
+/* --- Material-UI Component Specific Overrides --- */
+
+/* Styles the root container of Material-UI's Outlined TextField and Select components. */
+.form .form-group .MuiOutlinedInput-root {
+    border-radius: 5px !important; /* Consistent rounded corners for input fields */
+    height: 45px; /* Fixed height for a uniform look across fields */
+    /* Padding-left might interact with MUI's internal padding. Test thoroughly.
+       If issues arise, consider using `inputProps={{ style: { paddingLeft: '5px' } }}` on TextField. */
+    padding-left: 5px;
+}
+
+/* Removes the default border from Material-UI's Outlined variant.
+   The border is then effectively provided by the `.form-group input/textarea/MuiSelect-select` rules. */
+.form .form-group .MuiOutlinedInput-notchedOutline {
+    border: none !important;
+}
+
+/* Styles Material-UI SVG icons specifically in dark mode.
+   This is a broad selector. For more granular control (e.g., only dropdown arrows),
+   target specific MUI icon classes like `.MuiSelect-icon` within `body.dark`. */
+body.dark .MuiSvgIcon-root {
+    color: rgba(255, 255, 255, 0.7) !important; /* Lightens icon color for visibility in dark mode */
+}
+
+/* --- Button Styling --- */
+
+/* Styles the primary action button with the 'btn-blue' class. */
+.btn-blue {
+    background-color: #007bff !important; /* Vibrant primary blue background */
+    color: #fff !important; /* White text for contrast */
+    font-weight: 500;
+    padding: 10px 20px; /* Comfortable padding */
+    border-radius: 10px; /* Rounded button corners */
+    display: inline-flex; /* Enables icon and text alignment */
+    align-items: center; /* Vertically centers content */
+    gap: 8px; /* Space between icon and text */
+    border: none; /* No default border */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Indicates interactivity */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for the primary button. */
+.btn-blue:hover {
+    background-color: #0056b3 !important; /* Slightly darker blue on hover */
+}
+
+/* --- Rating Component Styling --- */
+
+/* Styles the individual star icons within the Material-UI Rating component. */
+.form .form-group .MuiRating-icon {
+    color: #ffc107; /* Standard gold color for ratings */
+}
+
+/* --- Card & Container Styling --- */
+
+/* Styles for the breadcrumb/header section container. */
+.card.shadow.mybreadcrumb {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    padding: 16px; /* Internal spacing */
+    border-radius: 8px; /* Rounded card corners */
+}
+
+/* Styles for the main form content card. */
+.card.p-4 {
+    padding: 24px; /* Generous internal spacing */
+    border-radius: 8px; /* Rounded card corners */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow */
+}
+
+/* --- Image Upload Box Styling --- */
+
+/* Styles for the image upload drop zone. */
+.uploadBox {
+    border: 2px dashed #ccc; /* Dashed border to indicate drop area */
+    border-radius: 8px; /* Rounded corners */
+    padding: 32px; /* Ample internal spacing */
+    text-align: center;
+    cursor: pointer; /* Indicates clickable area */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px; /* Ensures a minimum visible height */
+    transition: border-color 0.3s ease; /* Smooth transition on hover */
+    margin-top: 20px; /* Space from previous section */
+    margin-bottom: 20px; /* Space to next section */
+}
+
+/* Hover effect for the upload box. */
+.uploadBox:hover {
+    border-color: #007bff; /* Highlights the border on hover */
+}
+
+/* Heading within the upload box. */
+.uploadBox h6 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #555; /* Default text color */
+    font-size: 1.25rem; /* Larger font for clear prompt */
+}
+
+/* Paragraph text within the upload box. */
+.uploadBox p {
+    color: #6c757d; /* Muted text color */
+    font-size: 0.875rem; /* Standard body text size */
+}
+
+/* --- Subclass Detail Section (New) --- */
+
+/* Container for a subclass detail section, likely for grouping related information. */
+.form .subclassofdetail {
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 24px;
+    background-color: #fff; /* Default background */
+    /* Fixed the incomplete box-shadow property */ 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+/* Dark mode specific background for subclass detail */
+body.dark .form .subclassofdetail {
+    background-color: #1b2b4d; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.myemoji{
+  height: 50px;
+  width: 50px;
+  background: content-box ;
+  padding-right : 5px;
+}
+/* ========================================= */
+/* --- GENERAL RESPONSIVE STYLES --- */
+/* ========================================= */
+
+/* General Mobile adjustments (up to 767px) */
+@media (max-width: 767.98px) {
+  /* Hide the sidebar content by default on small screens */
+  .slidebar {
+    width: 0;
+    min-width: 0;
+    padding: 0;
+    border-right: none;
+    position: fixed;
+    height: 100vh;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  
+  .slidebar.active {
+    width: 280px;
+    min-width: 280px;
+    transform: translateX(0);
+    padding-top: 20px;
+  }
+  
+  .slidebar-content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  /* Adjust the main content to take up full width */
+  .main {
+    flex-direction: column;
+  }
+  
+  /* Make the header menu button visible */
+  .header .part2 {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .header .part2 .menu-btn-mobile {
+    display: block;
+  }
+
+  /* Dashboard Boxes - Stack them vertically */
+  .dashbordBoxWrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashbordBoxWrapper .dashboardBox {
+    width: 100%;
+  }
+
+  /* Product List Table - Make it scrollable */
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Footer and Pagination */
+  .tableFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tableFooter .pagination {
+    margin: 0 auto;
+  }
+}
+
+/* ========================================= */
+/* --- HEADER RESPONSIVE STYLES --- */
+/* ========================================= */
+
+@media (max-width: 991.98px) {
+  /* Reduce header padding and font sizes on tablets and smaller devices */
+  header {
+    height: 70px;
+    padding: 0 15px;
+  }
+  
+  header .logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+  }
+  
+  header .app-name {
+    font-size: 18px;
+  }
+
+  /* Hide the app name on very small screens to save space */
+  @media (max-width: 420px) {
+    header .app-name {
+      display: none;
+    }
+  }
+
+  /* Adjust search box size on tablets */
+  .searchbox {
+    width: 220px;
+  }
+
+  /* Hide search and user info on smaller phones */
+  @media (max-width: 575.98px) {
+    .searchbox,
+    .userImg {
+      display: none;
+    }
+    
+    .part3 {
+      gap: 10px;
+    }
+  }
+}
+
+/* ========================================= */
+/* --- LOGIN & SIGNUP RESPONSIVE STYLES --- */
+/* ========================================= */
+
+@media (max-width: 991.98px) {
+  .loginSection {
+    padding: 20px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .loginSection .loginBox {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .signUpSection .part1 {
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .signUpSection .part1 h1 {
+    font-size: 32px;
+  }
+  
+  .signUpSection .part1 p {
+    font-size: 16px;
+  }
+  
+  .signUpSection .loginBox {
+    left: 0;
+    padding: 20px 5px !important;
+  }
+}
+
+/* Adjust for small mobile screens */
+@media (max-width: 575.98px) {
+  .loginSection .loginBox .wrapper {
+    padding: 20px;
+  }
+}
+
+/* ========================================= */
+/* --- PRODUCT DETAILS RESPONSIVE STYLES --- */
+/* ========================================= */
+
+@media (max-width: 991.98px) {
+  .productDetailsSEction .row {
+    flex-direction: column;
+  }
+
+  .productDetailsSEction .col-lg-6 {
+    max-width: 100%;
+  }
+
+  .productDetailsSEction .productInfo .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productDetailsSEction .productInfo .row .col-sm-7 {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+  .ratingSection {
+    width: 100%;
+  }
+  
+  .reviewSection .reviewsRow {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .reviewSection .reviewsRow.reply {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .reviewsRow .repbtn {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+
+/* ========================================= */
+/* --- TABLET STYLES (768px to 991px) --- */
+/* ========================================= */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dashbordBoxWrapper .dashboardBox {
+    width: 100%;
+  }
+
+  .header .part2 {
+    margin-left: 20px;
+  }
+} 
+/* ========================================= */
+/* --- Dashboard & DashboardBox Responsive Styles --- */
+/* ========================================= */
+
+@media (max-width: 991.98px) {
+  /* On tablets and smaller screens, allow the main columns to stack */
+  .dashbordBoxWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Make the graph box and the dashboard boxes take up the full width */
+  .dashbordBoxWrapper .col-md-8,
+  .dashbordBoxWrapper .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Adjust the individual dashboard boxes to wrap on smaller screens */
+  .dashbordBoxWrapper .dashbordBoxWrapper.d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Make each individual dashboard box take up half the screen width on tablets,
+     or full width on very small phones, to create a 2x2 grid */
+  .dashbordBoxWrapper .dashbordBoxWrapper.d-flex .dashboardBox {
+    width: calc(50% - 10px); /* 2 boxes per row with a gap */
+    max-width: unset;
+  }
+
+  /* For extra small phones, stack the dashboard boxes vertically */
+  @media (max-width: 575.98px) {
+    .dashbordBoxWrapper .dashbordBoxWrapper.d-flex .dashboardBox {
+      width: 100%;
+    }
+  }
+}
+
+/* ========================================= */
+/* --- Product Table & Filters Responsive Styles --- */
+/* ========================================= */
+
+@media (max-width: 767.98px) {
+  /* Stack the filters vertically on mobile */
+  .cardFilters .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Make filter controls take up full width */
+  .cardFilters .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Ensure the table is horizontally scrollable */
+  .table-responsive {
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent table from shrinking and keep cell content visible */
+  .table.table-bordered {
+    width: 100%;
+    min-width: 700px; /* Adjust this value as needed for a readable table */
+  }
+
+  /* Optimize product table cells for smaller screens */
+  .prdocutbox {
+    width: 250px !important;
+  }
+  
+  .prdocutbox .info h6 {
+    white-space: normal;
+  }
+
+  /* Stack table footer elements */
+  .tableFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tableFooter .pagination {
+    margin-left: 0;
+  }
+}
+/* ========================================= */
+/* --- Header Responsive Styles --- */
+/* ========================================= */
+
+/* For Tablets and smaller desktops (991.98px and below) */
+@media (max-width: 991.98px) {
+  /* Reduce padding and font sizes to save space */
+  header {
+    height: 70px;
+  }
+  
+  header .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  header .app-name {
+    font-size: 18px;
+  }
+  
+  /* Adjust margins and gaps for better spacing */
+  header .part2 {
+    margin-left: 30px;
+    gap: 10px;
+  }
+
+  .searchbox {
+    width: 250px; /* Reduce search box width */
+  }
+
+  .myAcc {
+    padding: 0;
+  }
+}
+
+
+/* For Mobile devices (767.98px and below) */
+@media (max-width: 767.98px) {
+  header {
+    height: 60px;
+  }
+
+  .logo-link {
+    /* Make sure the logo is always visible on the far left */
+    flex-shrink: 0;
+  }
+
+  /* Hide the app name to create more space on mobile */
+  header .app-name {
+    display: none;
+  }
+
+  /* Completely hide the menu button and search box on the right */
+  header .part2 {
+    display: none;
+  }
+
+  /* Position the right-aligned icons more compact */
+  .part3 {
+    margin-left: auto;
+    gap: 5px; /* Reduce gap between icons */
+  }
+
+  /* Hide the full user info to save space, only show the image */
+  .myAcc .userInfo {
+    display: none;
+  }
+}
+
+/* For Extra small phones (575.98px and below) */
+@media (max-width: 575.98px) {
+  /* Adjust header height and logo size for very small screens */
+  header {
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  header .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Make sure buttons are a bit smaller for tiny screens */
+  header button.rounded-circle {
+    width: 35px !important;
+    min-width: 35px !important;
+    height: 35px !important;
+    font-size: 16px;
+  }
+
+  .userImg {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+  }
+}
+/* AddCategory.css */
+
+/* Reusable utility class */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Upload Bo
+x */
+.uploadBox .upload-icon svg {
+  width: 65px;
+  height: 85px;
+  font-size: 65px; /* Ensures the icon fills the space */
+  color: #555;     /* Optional: change as needed */
+}
+
+#categoryImageInput  svg{
+  width: 75px;
+  height: 75px;
+}
+.uploadBox {
+  margin-left: 10px;
+  width: 200px;
+  height: 150px;
+  border: 1px dashed;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--upload-bg);
+  border-color: var(--upload-border);
+  color: var(--upload-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+/* Hover effect */
+.uploadBox:hover {
+  background-color: var(--upload-hover-bg);
+}
+
+/* Inside icon/info */
+.uploadBox .info {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Theme variables for light & dark mode */
+:root {
+  --upload-bg: #f9f9f9;
+  --upload-border: #ccc;
+  --upload-text: #333;
+  --upload-hover-bg: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  --upload-bg: #1e1e1e;
+  --upload-border: #555;
+  --upload-text: #ddd;
+  --upload-hover-bg: #2b2b2b;
+}
+
+.imagescat{
+  height: 80px;
+  width: 80px;
+}
