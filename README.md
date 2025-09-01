@@ -221,7 +221,7 @@ npm start
 <div align="center">
 
 ### **🏠 Homepage**
-![Homepage](https://via.placeholder.com/800x400/4285f4/ffffff?text=Homepage+Screenshot)
+![Homepage](C:\Users\KRISHNA\OneDrive\Pictures\Screenshots\Screenshot 2025-08-28 174433.png)
 
 ### **📱 Product Catalog**
 ![Product Catalog](https://via.placeholder.com/800x400/34a853/ffffff?text=Product+Catalog)
