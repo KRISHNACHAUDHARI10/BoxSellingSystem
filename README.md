@@ -6,7 +6,7 @@
 ![MERN Stack](https://img.shields.io/badge/MERN-Stack-green?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Industry Project](https://img.shields.io/badge/Industry-Project-orange?style=for-the-badge&logo=building&logoColor=white)
 
-**A comprehensive full-stack e-commerce platform for box manufacturing and selling business**
+A comprehensive full-stack e-commerce platform for box manufacturing and selling business
 
 [🚀 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](https://github.com/KRISHNACHAUDHARI10/boxsellingsystem/issues) • [✨ Request Feature](https://github.com/KRISHNACHAUDHARI10/boxsellingsystem/issues)
 
